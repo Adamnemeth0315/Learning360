@@ -47,6 +47,54 @@
         </div>
       </nav>
 
+      <main>
+        <section class="py-5">
+          <div class="container">
+            <h1 class="mb-5 text-center">Kapcsolat</h1>
+            <div class="row">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <form>
+                  <div class="form-group">
+                      <label class="font-weight-bold" for="email">Email</label>
+                      <input type="email" name="email" id="email" class="form-control"
+                       placeholder="Email cím" required>
+                  </div>
+                  <div class="form-group">
+                      <label class="font-weight-bold" for="name">Név</label>
+                      <input type="text" name="name" id="name" class="form-control"
+                       placeholder="Név" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message" class="font-weight-bold">Üzenet</label>
+                    <textarea name="message" id="message" rows="5" class="form-control" required></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                    <select name="topic" id="topic" class="form-control" required>
+                      <option value="technikai">technikai</option>
+                      <option value="számlázási">számlázási</option>
+                      <option value="egyéb">egyéb</option>
+                    </select>
+                    <div class="input-group-append">
+                      <label for="topic" class="input-group-text">kérdés</label>
+                    </div>
+                  </div>
+                  <div class="form-check mb-4">
+                    <input type="checkbox" name="newsletter" id="newsletter" class="form-check-input" checked>
+                    <label for="newsletter" class="font-weight-bold form-check-label">Feliratkozom a hírlevélre</label>
+                  </div>
+                  <button class="btn btn-primary btn-lg" type="button" data-toggle="modal"
+                   data-target="#sendModal">Küldés</button>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d86344.44304765789!2d18.55577300737701!3d47.44579608138494!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2shu!4v1610021104869!5m2!1sen!2shu" 
+               height="450" aria-hidden="false" frameborder="0" tabindex="0" class="embed-responsive"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
       <footer class="py-4 text-white text-center text-md-left bg-dark mt-auto">
         <div class="container">
           <div class="row">
@@ -95,8 +143,26 @@
             </div>
           </div>
         </div>
-
       </footer>
+
+      <div class="modal fade" id="sendModal" tabindex="-1" aria-labelledby="sendModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Üzenet</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Bezárás">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Az üzenetet sikeresn elküldtük. 24 órán belül válaszolunk a megadott email címre.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">Bezár</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       
 
